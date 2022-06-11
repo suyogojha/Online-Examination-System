@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+  </style>
+  <body>
+    {% include "exam/navbar.html" %}
+
+      <div class="jumbotron" style="margin-top: 0px;
+        margin-bottom: 0px;">
+        <h1 class="display-4">Hello {{request.user.first_name}},</h1>
+        <p class="lead">Your Account has not been <b>ACTIVATED</b> yet! <br><br>Waiting for approval from the administrator <br><br>and Soon you'll be able to access your Account after approval</p>
+        <hr class="my-4">
+       
+        <p class="lead">
+          <a class="btn btn-danger btn-lg" href="/logout" style="border-radius: 0%;" role="button">Logout Now</a>
+        </p>
+      </div>
+
+{% include "exam/footer.html" %}
+  </body>
+</html>
